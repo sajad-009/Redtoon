@@ -1,3 +1,11 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
 :root,
 .navbar-dark,
 .dropdown-menu-dark,
@@ -32,7 +40,8 @@
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @font-face {
   font-family: yekan;
@@ -50,7 +59,8 @@ body {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .h5,
 h5 {
@@ -63,15 +73,22 @@ h5 {
 }
 nav {
   .btn {
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: -webkit-transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 nav .btn:active {
-  transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+      -ms-transform: scale(0.1);
+          transform: scale(0.1);
 }
 .desc {
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -79,11 +96,19 @@ nav .btn:active {
 .read-more {
   font-size: 0.9em;
   border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 8px 30px;
   i {
+    -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin-right: 5px;
     margin-bottom: -3px;
@@ -101,6 +126,8 @@ nav .btn:active {
   }
   .nav-item {
     border: 2px solid transparent;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
     font-size: 0.9em;
   }
@@ -111,7 +138,8 @@ nav .btn:active {
     background-color: #e8f8ff;
   }
   .navbar-toggler:focus {
-    box-shadow: 0 0 0 3px #31374e;
+    -webkit-box-shadow: 0 0 0 3px #31374e;
+            box-shadow: 0 0 0 3px #31374e;
   }
 }
 header {
@@ -125,6 +153,8 @@ header {
       right: 0;
       width: 100%;
       height: 100%;
+      background: -webkit-gradient(linear, right top, left top, from(#000000da), to(transparent));
+      background: -o-linear-gradient(right, #000000da, transparent);
       background: linear-gradient(to left, #000000da, transparent);
       z-index: 0;
     }
@@ -175,22 +205,32 @@ header {
 }
 .row-scrolling {
   overflow-x: auto;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .rows-container {
   max-width: 1300px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .row-header {
   width: 100%;
   background-color: var(--cyan-500);
   color: var(--color-1);
   border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 8px 15px;
   p {
     margin: 0;
@@ -202,14 +242,21 @@ header {
 }
 .most-popular {
   .post {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: var(--color-2);
-    box-shadow: 14px 14px 0px 0 var(--color-3);
+    -webkit-box-shadow: 14px 14px 0px 0 var(--color-3);
+            box-shadow: 14px 14px 0px 0 var(--color-3);
     .info {
       .info-list-item {
         line-height: 2;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         font-size: 0.9em;
         i {
           margin-left: 7px;
@@ -230,10 +277,13 @@ header {
         bottom: -300px;
         left: 0;
         padding: 20px;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         font-size: 0.9em;
         text-align: center;
-        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
         background-color: #0000009a;
         margin: 0;
       }
@@ -273,11 +323,14 @@ header {
       background-color: #000000be;
       padding: 20px 10px;
       text-align: center;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
       transition: 0.3s;
       h4 {
         font-family: fantasy;
         overflow: hidden;
-        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -314,6 +367,8 @@ header {
     position: absolute;
     bottom: 0;
     left: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(#000000d5), to(transparent));
+    background: -o-linear-gradient(bottom, #000000d5, transparent);
     background: linear-gradient(to top, #000000d5, transparent);
   }
   .desc {
@@ -323,7 +378,8 @@ header {
 .card {
   .card-title {
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
@@ -373,7 +429,8 @@ header {
   }
   .row-scrolling-md {
     overflow-x: auto;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .parent-img {
     height: 196px;
@@ -389,11 +446,17 @@ header {
   header {
     height: 400px;
     .swiper .swiper-slide::before {
+      background: -webkit-gradient(linear, left bottom, left top, from(#000000da), to(transparent));
+      background: -o-linear-gradient(bottom, #000000da, transparent);
       background: linear-gradient(to top, #000000da, transparent);
     }
     .swiper-caption {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
   }
   .row-we {
