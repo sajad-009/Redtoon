@@ -27,11 +27,8 @@
   </head>
   <body>
     <!-- نوبار -->
-    <nav
-      id="navbar"
-      class="navbar navbar-expand-md position-sticky top-0 bg-body-tertiary"
-    >
-      <div class="container">
+    <nav id="navbar" class="navbar navbar-expand-md px-2 fixed-top">
+      <div class="container px-3">
         <a class="navbar-brand" href="#">
           <img src="images/Toon.png" alt="" />
         </a>
@@ -83,7 +80,7 @@
             </li>
           </ul>
           <hr class="text-light my-4" />
-          <div class="btn-container d-flex">
+          <div class="btn-container py-2 py-md-0 d-flex">
             <button class="btn btn-outline-info mx-1 rounded-3">ورود</button>
             <button class="btn btn-light rounded-3">ساخت اکانت</button>
           </div>
@@ -99,10 +96,10 @@
           <div class="swiper-slide">
             <img src="images/beak-xx-copy.webp" alt="" />
             <div
-              class="swiper-caption position-absolute bottom-0 start-0 h-75 mb-4 m-lg-5 px-3 col-12 col-lg-5 flex-column justify-content-end align-items-center"
+              class="swiper-caption position-absolute bottom-0 start-0 h-75 mb-4 m-lg-5 col-12 col-lg-5 d-flex flex-column"
             >
               <h2 class="name mb-lg-4 mb-2">اسم مانگا</h2>
-              <div class="my-1 d-none d-md-block">
+              <div class="my-1 d-block">
                 <div class="btn-group">
                   <div class="btn text-light bg-dark">امتیاز</div>
                   <div class="btn btn-2 bg-light text-dark">10</div>
@@ -133,10 +130,10 @@
           <div class="swiper-slide">
             <img src="images/beak-xx.webp" alt="" />
             <div
-              class="swiper-caption position-absolute bottom-0 start-0 h-75 mb-4 m-lg-5 px-3 col-12 col-lg-5 flex-column justify-content-end align-items-center"
+              class="swiper-caption position-absolute bottom-0 start-0 h-75 mb-4 m-lg-5 col-12 col-lg-5 d-flex flex-column"
             >
               <h2 class="name mb-lg-4 mb-2">اسم مانگا</h2>
-              <div class="my-1 d-none d-md-block">
+              <div class="my-1 d-block">
                 <div class="btn-group">
                   <div class="btn text-light bg-dark">امتیاز</div>
                   <div class="btn btn-2 bg-light text-dark">10</div>
@@ -167,10 +164,10 @@
           <div class="swiper-slide">
             <img src="images/becopy.webp" alt="" />
             <div
-              class="swiper-caption position-absolute bottom-0 start-0 h-75 mb-4 m-lg-5 px-3 col-12 col-lg-5 flex-column justify-content-end align-items-center"
+              class="swiper-caption position-absolute bottom-0 start-0 h-75 mb-4 m-lg-5 col-12 col-lg-5 d-flex flex-column"
             >
               <h2 class="name mb-lg-4 mb-2">اسم مانگا</h2>
-              <div class="my-1 d-none d-md-block">
+              <div class="my-1 d-block">
                 <div class="btn-group">
                   <div class="btn text-light bg-dark">امتیاز</div>
                   <div class="btn btn-2 bg-light text-dark">10</div>
@@ -207,7 +204,7 @@
       id="navbar-genre"
       class="navbar container navbar-dark navbar-expand bg-body-tertiary py-2 px-3 mt-2 mb-5"
     >
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-0 d-none d-md-flex">
           <li class="nav-item">
             <a class="nav-link" href="#">اکشن</a>
@@ -1045,23 +1042,62 @@
             </div>
           </div>
         </div>
-        <div id="btn-group" class="btn-group d-flex mt-4 mx-auto" role="group">
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+        <div id="btn-group" class="btn-group d-flex mt-5 mx-auto" role="group">
+          <input
+            type="radio"
+            class="btn-check"
+            name="vbtn-radio"
+            id="vbtn-radio1"
+            autocomplete="off"
+            checked=""
+          />
           <label class="btn btn-outline-danger" for="vbtn-radio1">1</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+          <input
+            type="radio"
+            class="btn-check"
+            name="vbtn-radio"
+            id="vbtn-radio2"
+            autocomplete="off"
+          />
           <label class="btn btn-outline-danger" for="vbtn-radio2">2</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+          <input
+            type="radio"
+            class="btn-check"
+            name="vbtn-radio"
+            id="vbtn-radio3"
+            autocomplete="off"
+          />
           <label class="btn btn-outline-danger" for="vbtn-radio3">3</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off">
+          <input
+            type="radio"
+            class="btn-check"
+            name="vbtn-radio"
+            id="vbtn-radio4"
+            autocomplete="off"
+          />
           <label class="btn btn-outline-danger" for="vbtn-radio4">4</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio5" autocomplete="off">
+          <input
+            type="radio"
+            class="btn-check"
+            name="vbtn-radio"
+            id="vbtn-radio5"
+            autocomplete="off"
+          />
           <label class="btn btn-outline-danger" for="vbtn-radio5">5</label>
-          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio6" autocomplete="off">
+          <input
+            type="radio"
+            class="btn-check"
+            name="vbtn-radio"
+            id="vbtn-radio6"
+            autocomplete="off"
+          />
           <label class="btn btn-outline-danger" for="vbtn-radio6">6</label>
         </div>
       </div>
       <!-- اخبار و پیشنهادات -->
-      <div class="d-none d-md-flex d-lg-inline flex-nowrap flex-lg-wrap col-12 col-lg-3 px-1 order-md-1 order-lg-2">
+      <div
+        class="d-none d-md-flex d-lg-inline flex-nowrap flex-lg-wrap col-12 col-lg-3 px-1 order-md-1 order-lg-2"
+      >
         <!-- پیشنهادات -->
         <div class="col-md-5 col-lg-12 px-1">
           <div class="row-header">
@@ -1106,7 +1142,7 @@
           </div>
         </div>
         <!-- اخبار -->
-        <div class="col-md-7 col-lg-12 px-1">
+        <div class="news col-md-7 col-lg-12 px-1">
           <div class="row-header mb-2">
             <p class="title">اخرین اخبار ها</p>
             <a href="#" class="read-more">
@@ -1114,7 +1150,7 @@
               <i class="bi bi-arrow-left"></i>
             </a>
           </div>
-          <ul class="row list-unstyled p-2">
+          <ul class="row list-unstyled h-100 overflow-hidden p-2">
             <li class="news-item p-2">
               <div
                 class="parent-img mb-3 position-relative text-center rounded overflow-hidden"
@@ -1174,6 +1210,46 @@
       </div>
     </section>
 
+    <!-- موج -->
+    <svg
+      style="margin-bottom: -1px"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#1b1f2c"
+        fill-opacity="1"
+        d="M0,128L48,122.7C96,117,192,107,288,133.3C384,160,480,224,576,256C672,288,768,288,864,272C960,256,1056,224,1152,181.3C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+
+    <!-- فوتر -->
+    <footer>
+      <h3>سجاد رستمی</h3>
+      <ul class="list list-unstyled d-flex align-items-end">
+        <li class="mx-1"><a href="">Terms</a></li>
+        <li class="mx-1"><a href="">Privacy</a></li>
+        <li class="mx-1"><a href="">Security</a></li>
+        <li class="mx-1"><a href="">Status</a></li>
+        <li class="mx-1"><a href="">Blog</a></li>
+        <li class="mx-1"><a href="">Contact</a></li>
+        <li class="mx-1"><a href="">Manage cookies</a></li>
+      </ul>
+      <ul class="social-media d-flex list-unstyled fs-4">
+        <li class="icon instagram rounded">
+          <i class="bi bi-instagram"></i>
+        </li>
+        <li class="icon github rounded">
+          <i class="bi bi-github"></i>
+        </li>
+        <li class="icon telegram rounded">
+          <i class="bi bi-telegram"></i>
+        </li>
+        <li class="icon linkedin rounded">
+          <i class="bi bi-linkedin"></i>
+        </li>
+      </ul>
+    </footer>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
