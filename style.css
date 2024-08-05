@@ -5,7 +5,6 @@
 * Browsers: last 4 version
 */
 
-
 :root,
 .navbar-dark,
 .dropdown-menu-dark,
@@ -17,6 +16,7 @@
   --color-1: #13151d;
   --color-2: #1b1f2c;
   --color-3: #3e465a;
+  --color-4: #2c3349;
   --blue: #7cf3f7;
   --blue-2: #3ed8ff;
   --cyan-500: #0dcaf0de;
@@ -26,7 +26,7 @@
   --white: #fff;
   --gray: #575d63;
   --bs-tertiary-bg-rgb: 27, 31, 44;
-  --bs-navbar-color: rgba(255, 255, 255, 0.8);
+  --bs-navbar-color: rgb(255, 255, 255);
   --bs-heading-color: var(--text-color);
   --bs-body-bg: var(--color-2);
   --bs-dropdown-bg: var(--color-2);
@@ -54,7 +54,6 @@ img {
 body {
   background-color: var(--color-1);
   font: 17px vazir, yekan, sans-serif;
-  height: 2000px;
 }
 img {
   width: 100%;
@@ -121,6 +120,13 @@ nav .btn:active {
 }
 #navbar {
   z-index: 2000;
+  .container {
+    border: 1px solid var(--color-3);
+    background-color: #1b1f2c9f;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-radius: 15px;
+  }
   .navbar-brand {
     width: clamp(120px, 12%, 200px);
   }
@@ -130,6 +136,7 @@ nav .btn:active {
     -o-transition: 0.1s;
     transition: 0.1s;
     font-size: 0.9em;
+    max-width: 150px;
   }
   .nav-item:hover {
     border-bottom-color: var(--blue);
@@ -143,7 +150,7 @@ nav .btn:active {
   }
 }
 header {
-  height: 450px;
+  height: 550px;
   .swiper {
     height: 100%;
     .swiper-slide::before {
@@ -161,6 +168,10 @@ header {
     .swiper-caption {
       z-index: 2;
       height: 100%;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end;
+      padding: 50px;
       .name {
         font-size: 1.6em;
         text-shadow: 2px 2px 14px #000000da, -2px 2px 14px #000000da,
@@ -195,11 +206,14 @@ header {
           2px -2px 14px #000000da, -2px -2px 14px #000000da;
         max-width: 550px;
       }
+      .read-more {
+        max-width: 250px;
+      }
     }
   }
 }
 #navbar-genre.navbar {
-  border: 2px solid #fff;
+  border: 2px solid var(--color-3);
   max-width: 1200px;
   border-radius: 15px;
 }
@@ -352,7 +366,8 @@ header {
     }
   }
 }
-.row-we .post:hover .overlay {
+.row-we .post:hover .overlay,
+.row-we .post .overlay:active {
   bottom: 0;
   padding: 60px 10px;
 }
@@ -404,14 +419,99 @@ header {
     -webkit-line-clamp: 3;
   }
 }
-#btn-group{
+#btn-group {
   width: 250px;
+}
+footer {
+  background-color: var(--color-2);
+  padding: 0 30px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  h3 {
+    font-size: 1.9em;
+    font-weight: bold;
+    margin: 0;
+  }
+  .list {
+    font-size: 0.75em;
+  }
+  .social-media {
+    width: 250px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    .icon {
+      background-color: var(--color-4);
+      padding: 8px 12px 2px;
+      border: 1px solid var(--color-2);
+      -webkit-box-shadow: 6px 6px 4px var(--color-1);
+              box-shadow: 6px 6px 4px var(--color-1);
+      cursor: pointer;
+      font-weight: bold;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      color: var(--text-color);
+      .bi-instagram {
+        -webkit-transition: 0.1s;
+        -o-transition: 0.1s;
+        transition: 0.1s;
+        background: #833ab4;
+        background: -o-linear-gradient(260deg, #833ab4, #fd1d1d, #fcb045);
+        background: linear-gradient(190deg, #833ab4, #fd1d1d, #fcb045);
+        -webkit-background-clip: text;
+                background-clip: text;
+      }
+    }
+    .icon:hover {
+      -webkit-transform: translate(6px, 6px);
+          -ms-transform: translate(6px, 6px);
+              transform: translate(6px, 6px);
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+    .instagram:hover {
+      background-color: #fff;
+      i {
+        color: transparent;
+      }
+    }
+    .github:hover {
+      color: #000;
+      background-color: #fff;
+    }
+    .telegram:hover {
+      background-color: #fff;
+      color: #24a1de;
+    }
+    .linkedin:hover {
+      background-color: #fff;
+      color: #0e76a8;
+    }
+  }
 }
 @media screen and (max-width: 1000px) {
   header {
-    height: 350px;
-    .swiper-caption .genre .btn {
-      font-size: 0.75em;
+    height: 400px;
+    .swiper {
+      .swiper-caption {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: end;
+        padding: 10px 30px;
+        .genre .btn {
+          font-size: 0.75em;
+        }
+      }
     }
   }
   #navbar-genre.navbar {
@@ -432,10 +532,34 @@ header {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+  .proposal,
+  .news {
+    height: 450px;
+  }
   .parent-img {
-    height: 196px;
+    height: 210px;
     .desc {
       font-size: 1.2em;
+    }
+  }
+  footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    .social-media {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      margin: 30px 0;
+    }
+    .list{
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
     }
   }
 }
@@ -454,9 +578,16 @@ header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      padding: 10px;
+      .desc {
+        text-align: center;
+      }
     }
   }
   .row-we {
@@ -464,20 +595,19 @@ header {
       height: 350px;
     }
   }
-  .proposal {
+  .news {
     height: 450px;
   }
   .parent-img {
-    height: 211px;
+    height: 209px;
   }
 }
-
 @media screen and (max-width: 450px) {
   body {
     font-size: 14px;
   }
   header {
-    height: 300px;
+    height: 350px;
   }
   .row-we {
     .post {
