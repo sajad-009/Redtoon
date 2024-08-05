@@ -54,6 +54,7 @@ img {
 body {
   background-color: var(--color-1);
   font: 17px vazir, yekan, sans-serif;
+  overflow-x: hidden;
 }
 img {
   width: 100%;
@@ -120,7 +121,7 @@ nav .btn:active {
 }
 #navbar {
   z-index: 2000;
-  padding: 10px 0;
+  padding: 10px 20px;
   .container {
     border: 1px solid var(--color-3);
     background-color: #1b1f2c9f;
