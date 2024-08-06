@@ -343,7 +343,7 @@ header {
       -o-transition: 0.3s;
       transition: 0.3s;
       h4 {
-        font-family: fantasy;
+        font-family: fantasy, system-ui;
         overflow: hidden;
         -o-text-overflow: ellipsis;
            text-overflow: ellipsis;
