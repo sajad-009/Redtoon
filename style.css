@@ -37,6 +37,8 @@
   --bs-emphasis-color-rgb: 49, 210, 242;
   --bs-tertiary-bg: var(--color-3);
 }
+a{
+  text-decoration: none;
 img {
   width: 100%;
   height: 100%;
